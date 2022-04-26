@@ -1,8 +1,10 @@
+const User = require("./../models/User")
+
 class UserService 
 {
-    constructor(name)
+    static create(id,username,name)
     {
-        this.name = name
+       return new User(id,username,name,"Sin bio")
     }
 }
 
