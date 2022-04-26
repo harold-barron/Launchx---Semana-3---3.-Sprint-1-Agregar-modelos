@@ -1,4 +1,4 @@
-const user = require("./../models/User")
+// const user = require("./../models/User")
 const User = require("./../models/User")
 
 class UserService 
@@ -12,6 +12,12 @@ class UserService
     {
         const userInList= [user.id,user.username,user.name,user.bio]
         return  userInList
+    }
+
+    static updateUsername(user,newname)
+    { 
+        
+        return user.username = newname
     }
 }
 
