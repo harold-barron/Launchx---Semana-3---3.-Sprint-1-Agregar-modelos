@@ -4,13 +4,13 @@ describe ('Unit test for User class ', () =>
 {
     test('Create an User Object', ()=>
     {
-        const User_info = new User(1, `haroldvanlecks`, `Harold`, `bio`, `dateCreated`, `lastUpdated`)
+        const User_info = new User(1, `haroldvanlecks`, `Harold`, `bio`)
 
         expect(User_info.id).toBe(1)
         expect(User_info.username).toBe("haroldvanlecks")
         expect(User_info.name).toBe("Harold")
         expect(User_info.bio).toBe("bio")
-        expect(User_info.dateCreated).toBe("dateCreated")
-        expect(User_info.lastUpdated).toBe("lastUpdated")
+        expect(User_info.dateCreated).not.toBeUndefined()
+        expect(User_info.lastUpdated).not.toBeUndefined()
     });
 })
