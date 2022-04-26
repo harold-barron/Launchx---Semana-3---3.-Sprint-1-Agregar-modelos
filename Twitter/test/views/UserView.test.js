@@ -8,4 +8,10 @@ describe("Test for UserView", () =>{
         const result = userView.createUser(playload)
         expect(result.error).toMatch(/playload no existe/)
     })
+    test("2. Return an error object when try to create a new user with a playload with invalid properties", () =>
+    {
+        const playload = {username:null, name:12,id:"id"}
+        const result = userView.createUser(playload)
+        expect(result.error).toMatch(/nesecitan tener un valor valido/)
+    })
 })
