@@ -29,4 +29,15 @@ describe ('Unit test for User Service class', () =>
         UserService.updateUsername(user,"haroldv")
         expect(user.username).toBe("haroldv")
     })
+    test('4) Givven a list of user give me the list of usernames', () =>
+    {
+        const user1 = UserService.create(1,"haroldvanlecks1","harold")
+        const user2 = UserService.create(1,"haroldvanlecks2","harold")
+        const user3 = UserService.create(1,"haroldvanlecks3","harold")
+        const usernames = UserService.getAllUsernames([user1,user2,user3])
+        expect(usernames).toContain("haroldvanlecks1")
+        expect(usernames).toContain("haroldvanlecks2")
+        expect(usernames).toContain("haroldvanlecks3")
+        
+    })
 })
