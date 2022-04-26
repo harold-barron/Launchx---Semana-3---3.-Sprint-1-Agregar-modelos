@@ -25,6 +25,15 @@ class user
     {
         return this.lastUpdated
     }
+
+    setUsername(newname)
+    {
+        return this.name = newname
+    }
+    setBio(newbio)
+    {
+        this.bio = newbio
+    }
 }
 
 module.exports = user
