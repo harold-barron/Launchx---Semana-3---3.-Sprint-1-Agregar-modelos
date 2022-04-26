@@ -38,6 +38,6 @@ describe ('Unit test for User Service class', () =>
         expect(usernames).toContain("haroldvanlecks1")
         expect(usernames).toContain("haroldvanlecks2")
         expect(usernames).toContain("haroldvanlecks3")
-        
+       
     })
 })
