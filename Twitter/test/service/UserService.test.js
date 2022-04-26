@@ -13,4 +13,13 @@ describe ('Unit test for User Service class', () =>
         expect(User2.bio).not.toBeUndefined()
         
     });
+    test('2)Get all user data in a list ', () =>
+    {
+        const user2 = UserService.create(1,"haroldvanlecks","harold")
+        const userInfoInList = UserService.getInfo(user2)
+        expect(userInfoInList[0]).toBe(1)
+        expect(userInfoInList[1]).toBe("haroldvanlecks")
+        expect(userInfoInList[2]).toBe("harold")
+        expect(userInfoInList[3]).toBe("Sin bio")
+    })
 })
