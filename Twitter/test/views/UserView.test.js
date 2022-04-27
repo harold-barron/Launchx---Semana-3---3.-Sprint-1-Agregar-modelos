@@ -21,4 +21,12 @@ describe("Test for UserView", () =>{
         expect(result.error).toMatch(/nesecitan tener un valor valido/)     
         console.log(playload) 
     })
+    test("4. Creating an user by a given valid playload", ()=>
+    {
+        const playload = {username:"username", name:"name",id:1}
+        const result = userView.createUser(playload)
+        expect(playload.id).toBe(1)
+        expect(playload.username).toBe("username")
+        expect(playload.name).toBe("name")
+    })
 })
